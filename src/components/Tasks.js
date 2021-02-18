@@ -20,7 +20,8 @@ class Tasks extends Component {//props datos que un componente recibe atravez de
   
   
   render(){
-    return this.props.tasks.map(ele => <Task task={ele} key={ele.id}/>
+    return this.props.tasks.map(ele => <Task taskM={10} key={ele.id}/>
+    //return this.props.tasks.map(ele => <Task taskM={ele} key={ele.id}/>
     )
     /*
     return this.props.tasks.map(ele => <p key={ele.id}>

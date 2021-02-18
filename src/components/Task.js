@@ -1,16 +1,25 @@
 import React, {Component} from 'react';
 
-import './Task.css';
+//import './Task.css';
 
 class Task extends Component {//props datos que un componente recibe atravez de un objeto, PROPIEDADES
 
 
 
     /*
-  state = {
+    state = {
     tasks: tasks
-  }*/
-  
+    }*/
+
+    //function
+    StyleCompleted() {
+        return {
+            fontSize: '30px',
+            color: this.props.taskM.done ? 'gray' : 'red',
+            //color: 'gray',
+            textDecoration: this.props.taskM.done ? 'line-through':'none'
+        }
+    }
   
 
 
@@ -18,11 +27,23 @@ class Task extends Component {//props datos que un componente recibe atravez de 
 
     //Destructuring de JS??
     //Extrae los elementos antes de mostrarlos..
-    const {task} = this.props;//Guarda datos dentro de la constante "task"
+    const {taskM} = this.props;//De this.props voy a extraer task -> Guarda datos dentro de la constante "task"
 
     const redColor = {background: 'red'};
 
     //return <div style={redColor}>
+    return <div style={this.StyleCompleted()}>
+        {taskM.title} - 
+        {taskM.description} - 
+        {taskM.done} - 
+        {taskM.id}
+        <input type='checkbox'/>
+        <button style={btnDelete}>
+            x
+        </button>
+    </div>
+
+    /*
     return <div>
         {task.title} - 
         {task.description} - 
@@ -32,7 +53,7 @@ class Task extends Component {//props datos que un componente recibe atravez de 
         <button style={btnDelete}>
             x
         </button>
-    </div>
+    </div><
 
     /*
     const btnDelete = {

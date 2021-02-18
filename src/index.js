@@ -21,3 +21,7 @@ ReactDOM.render(//Ejecuta la aplicación hecha en js, pinta el componente llamad
 //
 //DESCARGAS VIDEOS DE YOUTUBE
 //https://es.savefrom.net/1-youtube-video-downloader-4.html
+
+//reactjs extension
+//https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
