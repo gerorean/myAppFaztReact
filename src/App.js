@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 //import React from 'react';
 //import logo from './logo.svg';
-import './App.css';
+import './App.css';//Styles
 
 import tasks from './sample/tasks.json';
 
+import Tasks from './components/Tasks';
+
+
+
 console.log(tasks);
+console.log('Task=',Tasks);
+
 
 
 class App extends Component {//props datos que un componente recibe atravez de un objeto, PROPIEDADES
@@ -16,14 +22,30 @@ class App extends Component {//props datos que un componente recibe atravez de u
   
   
   render(){
-    return <div>
+    return <div><h1>hola mundo</h1>
       { 30 / 5 }
-      { this.state.tasks.map(e=> <p key={e.id}>{e.title} - {e.description} - {e.done} - {e.id}</p>)}
+      <Tasks tasks={this.state.tasks}/>
     </div>
 
-    //<h1>hola mundo</h1>
+/*
+return <div><h1>hola mundo</h1>
+{ 30 / 5 }
+{ this.state.tasks.map(ele => <p key={ele.id}>
+  {ele.title} -- {ele.description} --- {ele.done} ---- {ele.id}
+  <Tasks/>
+  </p>)}
+<Tasks/>
+</div>
+*/
+
+    //export default App;
   }
 }
+
+
+export default App;
+
+
 
 /*
 //Estado: datos internos que tiene un componente
@@ -113,7 +135,7 @@ function App() {
 }
 */
 
-export default App;
+//export default App;
 
 //linea 8 <img src={logo} className="App-logo" alt="logo" />
         
